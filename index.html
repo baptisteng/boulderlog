@@ -210,7 +210,7 @@ function drawHolds(cvs,holdsArr){
     ctx.shadowColor=h.color;ctx.shadowBlur=10;
     ctx.beginPath();ctx.arc(x,y,r,0,Math.PI*2);
     ctx.fillStyle='rgba(0,0,0,0)';ctx.fill();
-    ctx.lineWidth=3;ctx.strokeStyle=h.color;ctx.stroke();
+    ctx.lineWidth=Math.max(3, r*0.15);ctx.strokeStyle=h.color;ctx.stroke();
     ctx.restore();
   });
 }
